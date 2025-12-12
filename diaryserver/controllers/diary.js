@@ -90,12 +90,33 @@ const deleteEntry = async (req, res) => {
   }
 };
 
+const searchEntries = async (req, res) => {
+  const { q } = req.params;
+
+  if (!query) {
+    return res.status(400).json({ error: "Search query is required" });
+  }
+
+  try {
+    const results = await Diary.search(q);
+
+    res.status(200).json(results);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: "Failed to search diary entries" });
+  }
+};
+
+
+
+
 module.exports = {
   getAllEntries,
   getEntryById,
   createEntry,
   updateEntry,
   deleteEntry,
+  searchEntries,
 };
 
 

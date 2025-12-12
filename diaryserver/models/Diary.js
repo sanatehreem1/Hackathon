@@ -42,7 +42,7 @@ class Diary {
     );
 
     return new Diary(response.rows[0]);
-  }
+    }
     
     async update(data) {
         const { title, content, category } = data;
@@ -65,6 +65,20 @@ class Diary {
         const response = await db.query("DELETE FROM data_entries WHERE title = $1 RETURNING *;", [this.title]);
         return new Diary(response.rows[0]);
     }
+
+    static async searchByString(searchString) {
+    const response = await db.query(
+      "SELECT * FROM diary_entry WHERE title LIKE $1 OR content LIKE $1 ORDER BY entry_date DESC;",
+      [`%${searchString}%`]
+    );
+
+      if (response.rows.length === 0) {
+        throw new Error("No entries match the search criteria.");
+      }
+
+      return response.rows.map(entry => new Diary(entry));
+  }
 }
+
 
 module.exports = Diary;
