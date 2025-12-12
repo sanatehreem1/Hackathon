@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bridget Jones Diary</title>
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bridget Jones Diary</h1>
+        <p> Private thoughts</p>
+    </header>
+    <section class ="card">
+        <h2>Add New Diary Entry</h2>
+        <form id="diaryform">
+            <input type="text" id="title" name="title" placeholder="Title" required>
+            <textarea id="content" name="content" placeholder="Write your diary entry here..." required></textarea>
+            <button type="submit">Add Entry</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Search Diary Entries</h2>
+        <form id="searchform">
+            <input type="text" id="search-query" placeholder="Search...">
+            <button id="search-button">Search</button>
+        </form>
+    </section>
+    
+    <section class="card">
+        <form id="resetform">
+            <button id="reset-button">Reset Search</button>
+        </form>
+    </section>
+        <h2>Diary Entries</h2>
+        <div id="entries-container">
+            <button id="load-entries">Show Diary Entries</button>
+        </div>
+    </section>
+    <section class="edit-section" id="edit-section" style="display: none;">
+        <h2>Edit Diary Entry</h2>
+        <form id="edit-form">
+            <input type="text" id="edit-title" name="edit-title" placeholder="Title" required>
+            <textarea id="edit-content" name="edit-content" placeholder="Edit your diary entry here..." required></textarea>
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancel-edit">Cancel</button>
+        </form>
+    </section>
+    
+    
+</body>
+</html>
