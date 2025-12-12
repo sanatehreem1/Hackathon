@@ -1,14 +1,3 @@
-
-  "scripts": {
-    "test": "echo" \"Error: no test specified\" && exit 1",
-    "dev": "nodemon -L diaryserver/index.js",
-    "start": "node/diaryserver/index.js",
-    "setup-db": "node ./diaryserver/db/setup.js"
-  },
-
-
-
-
 {
   "devDependencies": {
     "nodemon": "^3.1.11"
