@@ -1,0 +1,7 @@
+CREATE TABLE diary_entries (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(100),
+  content TEXT NOT NULL,
+  category VARCHAR(50),
+  entry_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+); 
