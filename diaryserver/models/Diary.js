@@ -1,4 +1,4 @@
-const db = require('../db/diary');
+const db = require('../db/connect');
 
 class Diary {
     constructor({id, title, content, category, entry_date,}) {

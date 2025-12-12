@@ -10,3 +10,4 @@ CREATE INDEX idx_category ON diary_entries(category);
 CREATE INDEX idx_title ON diary_entries(title);
 CREATE INDEX idx_content ON diary_entries USING GIN (to_tsvector('english', content));
 CREATE INDEX idx_fulltext ON diary_entries USING GIN (to_tsvector('english', title || ' ' || content));
+
