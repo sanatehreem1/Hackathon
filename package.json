@@ -1,0 +1,22 @@
+
+  "scripts": {
+    "test": "echo" \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -L diaryserver/index.js",
+    "start": "node/diaryserver/index.js",
+    "setup-db": "node ./diaryserver/db/setup.js"
+  },
+
+
+
+
+{
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.16.3"
+  }
+}
