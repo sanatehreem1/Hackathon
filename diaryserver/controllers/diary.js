@@ -15,7 +15,7 @@ const getEntryById = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const entry = await Diary.getById(id);
+    const entry = await Diary.getOneById(id);
 
     if (!entry) {
       return res.status(404).json({ error: "Diary entry not found" });
