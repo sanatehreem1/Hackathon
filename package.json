@@ -1,11 +1,19 @@
 {
-  "devDependencies": {
-    "nodemon": "^3.1.11"
+  "name": "diaryserver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node diaryserver/index.js",
+    "dev": "nodemon diaryserver/index.js",
+    "setup-db": "node ./diaryserver/db/setup.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "pg": "^8.16.3"
+    "express": "^4.19.2",
+    "pg": "^8.12.0",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
